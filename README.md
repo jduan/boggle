@@ -1,6 +1,7 @@
 # Boggle
-
-TODO: Write a gem description
+An implementation of the algorithms for the game Boggle. It takes an 2-d array
+of letters and output all the words it can find from the board based on words
+defined in /usr/share/dict/web2.
 
 ## Installation
 
@@ -18,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Take a look at board\_spec.rb to see how you can run the code.
 
 ## Contributing
 
