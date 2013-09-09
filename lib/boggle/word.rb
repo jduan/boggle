@@ -4,7 +4,6 @@ module Boggle
   module Word
     def self.is_word?(str)
       load_dictionary
-      puts "dictionary size: #{@dictionary.size}"
       @dictionary.include? str
     end
 
