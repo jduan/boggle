@@ -4,7 +4,7 @@ module Boggle
   module Word
     def self.is_word?(str)
       load_dictionary
-      @dictionary.include? str
+      @dictionary.include? str.downcase
     end
 
     private

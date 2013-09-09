@@ -1,4 +1,6 @@
+require 'boggle/word'
 require 'boggle/cell'
+require "set"
 
 module Boggle
   Coordinates = Struct.new(:x, :y)
@@ -45,6 +47,35 @@ module Boggle
       end
 
       @cells = @coords_to_cells.values
+    end
+
+    def find_all_words
+      all_words = Set.new
+      @cells.each do |cell|
+        visited = Hash.new(false)
+        buffer = [cell.value]
+        visited[cell] = true
+        words = Set.new
+        find_all_words_from_cell(words, cell, visited, buffer)
+        #puts "words from letter #{cell.value}:"
+        #p words
+        all_words.merge(words)
+      end
+
+      all_words
+    end
+
+    def find_all_words_from_cell(words, cell, visited, buffer)
+      cell.neighbors.each do |c|
+        return if visited[c]
+        visited[c] = true
+        buffer << c.value
+        word = buffer.join
+        words << word if Word.is_word? word
+        find_all_words_from_cell(words, c, visited, buffer)
+        visited[c] = false
+        buffer.pop
+      end
     end
   end
 end

@@ -46,5 +46,18 @@ module Boggle
       cells[15].value.should == "N"
       cells[15].neighbors.size.should == 3
     end
+
+    it "find_all_words should return all valid words" do
+      matrix = [
+        %w(C O D A),
+        %w(A R N P),
+        %w(O S E L),
+        %w(I R U M),
+      ]
+
+      board = Board.new(matrix)
+      words = board.find_all_words
+      words.size.should == 125
+    end
   end
 end
