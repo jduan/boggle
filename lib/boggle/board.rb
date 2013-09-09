@@ -62,7 +62,7 @@ module Boggle
         all_words.merge(words)
       end
 
-      all_words
+      all_words.to_a
     end
 
     def find_all_words_from_cell(words, cell, visited, buffer)

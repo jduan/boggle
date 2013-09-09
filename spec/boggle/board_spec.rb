@@ -58,6 +58,24 @@ module Boggle
       board = Board.new(matrix)
       words = board.find_all_words
       words.size.should == 125
+      words.should == ["CA", "OD", "OR", "ORC", "ON", "DO", "DOC", "DA",
+                       "AD", "ADO", "AN", "ANOA", "AND", "AR", "ARC",
+                       "AS", "ROC", "ROD", "RA", "RE", "NO", "NOD", "NOA",
+                       "NOR", "NA", "NE", "PA", "PAD", "PAN", "PAND", "PER",
+                       "PERN", "PEN", "PEND", "PENDA", "OAR", "ORA", "ORNA",
+                       "OS", "SA", "SAC", "SACO", "SAO", "SAR", "SAROD",
+                       "SARD", "SNOD", "SO", "SOAR", "SORDA", "SORA", "SORN",
+                       "SE", "SER", "SERO", "SERA", "SEN", "SEND", "SEPAD",
+                       "SI", "ER", "ERD", "ERA", "ERS", "EN", "END", "ENS",
+                       "ES", "EL", "EROS", "EU", "EM", "LENO", "LEND",
+                       "LENAD", "LENS", "LEPA", "LUE", "LUES", "IO", "IS",
+                       "ISO", "IRE", "ROAR", "ROI", "REND", "REP", "REPAND",
+                       "REL", "RIO", "RISE", "RISER", "RISEN", "RUSE", "RUE",
+                       "RUER", "RUEN", "RULE", "RULER", "US", "USAR", "USE",
+                       "USER", "ULNA", "ULNAD", "ULE", "UR", "URE", "UM",
+                       "UME", "ME", "MERO", "MEN", "MEND", "MENSA", "MESA",
+                       "MESO", "MEL", "MEROS", "MU", "MUSAR", "MUSE", "MUSER",
+                       "MULE", "MURE"]
     end
   end
 end
